@@ -10,12 +10,17 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class BriefCollectionViewController: UICollectionViewController {
-
+class BriefCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var addBtn: UIBarButtonItem!
+    @IBOutlet weak var searchBtn: UIBarButtonItem!
+    @IBOutlet weak var compossBtn: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
+
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
@@ -41,18 +46,18 @@ class BriefCollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDataSource
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+     func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
 
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return 0
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
         // Configure the cell
@@ -91,4 +96,13 @@ class BriefCollectionViewController: UICollectionViewController {
     }
     */
 
+    // MARK: IBAction
+    @IBAction func tappedAddBtn(sender: UIButton) {
+    }
+    
+    @IBAction func tappedSearchBtn(sender: UIButton) {
+    }
+    
+    @IBAction func tappedCompossBtn(sender: UIButton) {
+    }
 }
