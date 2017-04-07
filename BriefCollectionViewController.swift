@@ -57,9 +57,9 @@ class BriefCollectionViewController: UIViewController, UICollectionViewDelegate,
         if section == 0 {
             return 7
         } else {
-            return dateManager.daysAcquisition()
+            let dataManager = DateManager()
+            return dataManager.daysAcquisition()
         }
-        return 0
     }
 
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

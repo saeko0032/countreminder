@@ -15,6 +15,7 @@ class DateManager: NSObject {
     var numberOfItems: Int!
     
     func daysAcquisition() -> Int {
+        let calendar = Calendar.current
         let rangeOfWeeks = NSCalendar.current.range(of: NSCalendar.Unit.weekOfMonth, in: NSCalendar.Unit.month, for: firstDateOfMonth())
         
         let numberOfWeeks = rangeOfWeeks.length
